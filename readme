@@ -1,0 +1,156 @@
+# 🌱 EcoLearn - Plataforma Gamificada de Sustentabilidade
+
+EcoLearn é uma plataforma educacional gamificada inspirada no estilo do Duolingo, focada em ensinar conceitos de sustentabilidade de forma interativa.
+
+O objetivo do projeto é incentivar o aprendizado sobre temas como reciclagem, consumo consciente e energias renováveis através de desafios e quizzes.
+
+---
+
+# 🎯 Objetivo do Projeto
+
+Promover a conscientização ambiental utilizando elementos de gamificação para tornar o aprendizado mais envolvente e acessível.
+
+O usuário aprende conceitos teóricos e em seguida responde perguntas para testar seu conhecimento, ganhando recompensas dentro da plataforma.
+
+---
+
+# 🕹️ Como Funciona
+
+1. O usuário acessa a plataforma
+2. Lê uma teoria sobre um tema ambiental
+3. Responde perguntas relacionadas ao conteúdo
+4. Recebe recompensas ao acertar
+
+Sistema de progressão:
+
+- Ganho de XP
+- Sistema de níveis
+- Vidas limitadas
+- Moedas virtuais
+- Ranking de jogadores (opcional)
+
+---
+
+# 🧩 Funcionalidades
+
+## 📚 Sistema Educacional
+
+- Exibição de teorias educativas
+- Sistema de perguntas e respostas
+- Popups interativos para teoria e quiz
+
+## 🎮 Sistema de Gamificação
+
+- Sistema de XP
+- Sistema de níveis
+- Sistema de vidas
+- Moedas virtuais
+- Ranking de jogadores (opcional)
+- Pular desafio (opcional)
+
+## 💾 Sistema de Progresso
+
+- Salvamento de progresso no navegador (Local Storage)
+- Carregamento automático do progresso salvo
+
+---
+
+# 👤 Perfil do Jogador (opcional)
+
+O usuário poderá visualizar seu progresso:
+
+- Nível atual
+- XP total
+- Ranking
+- Conquistas
+
+---
+
+# 🏗️ Estrutura do Projeto
+
+O projeto utiliza programação orientada a objetos em JavaScript.
+
+Principais classes:
+
+### Jogador
+
+Responsável por armazenar os dados do jogador:
+
+- Nome
+- XP
+- Nível
+- Vidas
+- Moedas
+
+### Pergunta
+
+Representa uma pergunta do quiz:
+
+- Enunciado
+- Alternativas
+- Resposta correta
+
+### Teoria
+
+Contém o conteúdo educativo apresentado ao jogador antes do quiz.
+
+---
+
+# 🌐 Estrutura de Páginas
+
+## Página Inicial
+
+Apresentação da plataforma.
+
+## Sobre
+
+Informações sobre o projeto e a equipe.
+
+## Objetivo
+
+Explicação da importância da sustentabilidade.
+
+## Contato
+
+Informações para contato.
+
+## Página do Jogo
+
+Área principal onde o usuário aprende e responde os desafios.
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+- HTML5
+- CSS3
+- JavaScript
+- Local Storage
+
+---
+
+# 📚 Tema Educacional
+
+Os conteúdos abordam temas como:
+
+- Reciclagem
+- Energias renováveis
+- Redução de resíduos
+- Consumo consciente
+- Preservação ambiental
+
+---
+
+# 🚀 Possíveis Melhorias Futuras
+
+- Sistema de ranking online
+- Conquistas desbloqueáveis
+- Mais níveis e desafios
+- Sistema de login
+- Integração com API
+
+---
+
+# 👨‍💻 Projeto Acadêmico
+
+Este projeto foi desenvolvido como parte de uma atividade acadêmica com foco em aprendizado de desenvolvimento web e conceitos de gamificação aplicados à educação ambiental.
