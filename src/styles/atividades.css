@@ -16,17 +16,58 @@
   font-size: 20px;
   transition: 0.25s;
   margin: 20px;
+  border: none;
+  position: relative;
 }
-.atividade:hover {
-  scale: 1.3;
-}
+
+/* styles dos card de atividades odd */
 .atividade:nth-child(odd) {
   transform: translateX(-40px);
 }
+.atividade:nth-child(odd):after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -30px;
+  background-color: brown;
+  border-radius: 50%;
+}
+.atividade:nth-child(odd)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -50px;
+  right: 50px;
+  background-color: brown;
+  border-radius: 50%;
+}
+
+/* styles dos card de atividades even */
 .atividade:nth-child(even) {
   transform: translateX(40px);
 }
-
+.atividade:nth-child(even):after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -30px;
+  background-color: brown;
+  border-radius: 50%;
+}
+.atividade:nth-child(even)::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -50px;
+  left: 50px;
+  background-color: brown;
+  border-radius: 50%;
+}
+/* styles das coisas dentro dos card de atividades */
 .circuloAtividade {
   width: 90px;
   height: 90px;
@@ -34,6 +75,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: 0.25s;
+}
+
+.atividade:hover .circuloAtividade {
+  scale: 1.3;
 }
 .teoria {
   background-color: lawngreen;

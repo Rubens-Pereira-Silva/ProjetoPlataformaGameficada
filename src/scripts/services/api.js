@@ -15,3 +15,9 @@ function pegarAtividades() {
     new Atividade("pratica", "Reciclagem", "haltere.png"),
   ];
 }
+
+function statusJogador() {
+  return {
+    nivel: 6,
+  };
+}
