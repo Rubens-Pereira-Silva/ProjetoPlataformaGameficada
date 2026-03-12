@@ -4,10 +4,12 @@ const sectionAtividades = document.getElementById("atividades");
 // consts modal
 const teoriaDialog = document.getElementById("teoriaDialog");
 const teoriaModalParagrafo = document.getElementById("teoriaModalParagrafo");
+const teoriaModalTitulo = document.getElementById("teoriaModalTitulo")
 
 let atividades = pegarAtividades();
 
 let atividadeAtual;
+let atividadeAtualNumero;
 let numeroAtividadeAtual = 0;
 
 function verificarNivel(nivelAtt) {
@@ -20,6 +22,8 @@ function verificarNivel(nivelAtt) {
 //Botões de abrir os models
 function btnteoria(nivelAtt) {
   if (verificarNivel(nivelAtt)) {
+    atividadeAtualNumero = nivelAtt
+    numeroAtividadeAtual = 0
     console.log("Botão de teoria precionado");
     atividadeAtual = atividades[nivelAtt];
     teoriaDialog.showModal();
@@ -35,21 +39,28 @@ function btnpratica(nivelAtt) {
 
 //funções do modal
 function btnfecharModal() {
+  numeroAtividadeAtual = 0;
   teoriaDialog.close();
   document.body.style.overflow = "auto";
 }
-
 function attModal() {
   teoriaModalParagrafo.innerText = atividadeAtual.teoria[numeroAtividadeAtual];
+  teoriaModalTitulo.innerText = atividadeAtual.nome
 }
-
 function mudarPaginaTeoria(lado) {
+  if(lado == 2 && numeroAtividadeAtual == atividadeAtual.teoria.length - 1){
+    addMoedaTeoria(10, atividadeAtualNumero)
+    addNivelJogador(atividadeAtualNumero)
+    btnfecharModal()
+    return;
+  }
   if (lado == 1 && numeroAtividadeAtual > 0) {
     numeroAtividadeAtual -= 1;
   }
   if (lado == 2 && numeroAtividadeAtual < atividadeAtual.teoria.length - 1) {
     numeroAtividadeAtual += 1;
   }
+  console.log(numeroAtividadeAtual +"    "+ atividadeAtual.teoria.length)
   attModal();
 }
 
@@ -60,7 +71,7 @@ function init() {
     sectionAtividades.innerHTML += `
       <button onClick="btn${atividade.type}(${i})" class="atividade">
           <div class="circuloAtividade ${atividade.type}">
-            <img src="/src/images/${atividade.icon}" alt="" />
+            <img src="../images/${atividade.icon}" alt="" />
           </div>
           <p>${atividade.nome}</p>
         </button>

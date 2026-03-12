@@ -5,22 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Atividades</title>
 
-    <link rel="stylesheet" href="/src/styles/atividades.css" />
+    <link rel="stylesheet" href="../styles/atividades.css" />
   </head>
   <body>
-    <section id="atividades"></section>
-    <dialog id="teoriaDialog">
-      <button class="btn-fecharModal" onclick="btnfecharModal()">X</button>
-      <h3>Titulo</h3>
-      <p id="teoriaModalParagrafo">
-        teoria mais teoria com teorias teoricas teorizadas
-      </p>
-      <div class="modal-btns">
-        <button onclick="mudarPaginaTeoria(1)">⬅️</button>
-        <button onclick="mudarPaginaTeoria(2)">➡️</button>
-      </div>
+
+    <main>
+      <header></header>
+      <section id="atividades"></section>
+      <dialog id="teoriaDialog">
+        <button class="btn-fecharModal" onclick="btnfecharModal()">X</button>
+        <h3 id="teoriaModalTitulo"></h3>
+        <p id="teoriaModalParagrafo">
+          teoria mais teoria com teorias teoricas teorizadas
+        </p>
+        <div class="modal-btns">
+          <button onclick="mudarPaginaTeoria(1)">⬅️</button>
+          <button onclick="mudarPaginaTeoria(2)">➡️</button>
+        </div>
+      </main>
+>
+      
     </dialog>
-    <script src="/src/scripts/services/api.js"></script>
-    <script src="/src/scripts/atividades.js"></script>
+    <script src="../scripts/services/api.js"></script>
+    <script src="../scripts/atividades.js"></script>
+    <script src="../scripts/services/header.js"></script>
   </body>
 </html>
