@@ -1,32 +1,41 @@
 let jogador = {
   nome: "Jogador Bom",
   moedas: 0,
-  nivel: 2,
-}
+  nivel: 4,
+};
 //Funções do jogador
 
-function addMoedaTeoria(quantidade, nivelAtt){
-  console.log(quantidade, nivelAtt, jogador.nivel)
-  if(nivelAtt == jogador.nivel){
-    console.log(jogador)
-    jogador.moedas += quantidade
-    attHeader()
+let ListaTeoriaTeste = [
+  "Definição: A reciclagem é um processo que tem como propósito o reaproveitamento de lixo sólido, geralmente vidro, metal, papeis e principalmente plástico, ele ficou bastante chamativo quando começamos a produzir muito lixo",
+  "Para que o lixo possa ser reciclável, é necessário que ele seja primeiro separado, por isso você definitivamente já deve ter visto um grupo de lixeiras coloridas pela rua, a lixeira azul é para papel, a verde é para o vidro, vermelha para os plásticos e amarela aos metais.",
+  "aqui podemos ver a terceira pagina da teoria",
+  "a quarta tambem esta aqui",
+  "para finalizar a quinta tambem esta entre nos",
+];
+
+let ListaTeoriaEconomiaCircular = [
+  "Economia circular é um modelo de produção e consumo baseado em reutilizar, renovar e reparar os materiais",
+  "Seu maior ponto forte é retardar o uso de recursos naturais,pois estarão em atividade por mais tempo",
+  "permitindo automaticamente uma diminuição no descarte de lixo, consumo de energia e dependencia de materia prima",
+  "A união europeia é uma das organizações a favor desse metodo, almejando atingir tal sustentabilidade atraves de ideias que irão incentivar as industrias produtoras mudar",
+];
+
+function addMoedaTeoria(quantidade, nivelAtt) {
+  console.log(quantidade, nivelAtt, jogador.nivel);
+  if (nivelAtt == jogador.nivel) {
+    console.log(jogador);
+    jogador.moedas += quantidade;
+    attHeader(jogador);
   }
 }
 
-function addNivelJogador(nivelAtt){
-  if(nivelAtt == jogador.nivel){
-    jogador.nivel += 1
-    console.log("Nivel "+ jogador.nivel)
-    attHeader()
-    }
+function addNivelJogador(nivelAtt) {
+  if (nivelAtt == jogador.nivel) {
+    jogador.nivel += 1;
+    console.log("Nivel " + jogador.nivel);
+    attHeader(jogador);
   }
-  
-
-
-
-
-
+}
 
 class Atividade {
   constructor(type, nome, icon, teoria) {
@@ -36,22 +45,30 @@ class Atividade {
     this.teoria = teoria;
   }
 }
-
-let ListaTeoriaTeste = [
-  "Aqui temos a primeira pagina da teoria",
-  "aqui temos a segunda pagina da teoria",
-  "aqui podemos ver a terceira pagina da teoria",
-  "a quarta tambem esta aqui",
-  "para finalizar a quinta tambem esta entre nos",
-];
+class Desafio {
+  constructor(type, pergunta, respostas) {
+    this.type = type;
+    this.pergunta = pergunta;
+    this.respostas = respostas;
+  }
+}
 
 function pegarAtividades() {
   return [
     new Atividade("teoria", "Reciclagem", "livro.png", ListaTeoriaTeste),
     new Atividade("teoria", "Reciclagem 2 ", "livro.png", ListaTeoriaTeste),
     new Atividade("teoria", "Reutilizar", "livro.png", ListaTeoriaTeste),
-    new Atividade("teoria", "Baterias e Pilhas", "livro.png", ListaTeoriaTeste),
-    new Atividade("pratica", "Reciclagem", "haltere.png", ""),
+    new Atividade(
+      "teoria",
+      "Economia Circular",
+      "livro.png",
+      ListaTeoriaEconomiaCircular
+    ),
+    new Atividade("pratica", "Reciclagem", "haltere.png", [
+      new Desafio("TrueAndFalse", "Latinhas são feitas de metal?", 1),
+      new Desafio("TrueAndFalse", "Papel pode ser amassado?", 2),
+      new Desafio("TrueAndFalse", "radiação é bacana?", 1),
+    ]),
   ];
 }
 

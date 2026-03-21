@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../styles/atividades.css" />
   </head>
   <body>
-
     <main>
       <header></header>
       <section id="atividades"></section>
@@ -22,12 +21,17 @@
           <button onclick="mudarPaginaTeoria(1)">⬅️</button>
           <button onclick="mudarPaginaTeoria(2)">➡️</button>
         </div>
-      </main>
->
-      
-    </dialog>
+      </dialog>
+
+      <dialog id="DesafioDialog">
+        <button class="btn-fecharModal" onclick="btnfecharModal()">X</button>
+        <h3 id="DesafioModalTitulo"></h3>
+        <p id="DesafioModalPerfunta">Desafios</p>
+      </dialog>
+    </main>
+
     <script src="../scripts/services/api.js"></script>
-    <script src="../scripts/atividades.js"></script>
     <script src="../scripts/services/header.js"></script>
+    <script src="../scripts/atividades.js"></script>
   </body>
 </html>

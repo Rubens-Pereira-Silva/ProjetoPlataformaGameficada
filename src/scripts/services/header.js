@@ -1,9 +1,9 @@
-const header = document.querySelector("header")
+const header = document.querySelector("header");
 
-function attHeader(){
-    header.innerHTML = `
-    <h3>Moedas:${jogador.moedas}</h3>
-`
+function attHeader(jogadorRef) {
+  header.innerHTML = `
+    <h3>Moedas:${jogadorRef.moedas}</h3>
+`;
 }
 
-attHeader()
+attHeader();
