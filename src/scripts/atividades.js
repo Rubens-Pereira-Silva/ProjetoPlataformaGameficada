@@ -23,6 +23,7 @@ function verificarNivel(nivelAtt) {
   }
   return false;
 }
+
 //Botões de abrir os models
 function btnteoria(nivelAtt) {
   if (verificarNivel(nivelAtt)) {
@@ -67,22 +68,25 @@ function attModalDesafio() {
   DesafioModalPergunta.innerText =
     atividadeAtual.teoria[numeroAtividadeAtual].pergunta;
 
-  if ((atividadeAtual.teoria[numeroAtividadeAtual].type = "TrueAndFalse")) {
+  if (atividadeAtual.teoria[numeroAtividadeAtual].type == "TrueAndFalse") {
     desafioTrueFalse();
+  } else {
+    desafioMultiplo();
   }
 }
 
 function respostaCorreta(btn) {
+  if (btn == atividadeAtual.teoria[atividadeAtualNumero].respostas[0]) {
+    pontuacaoDesafio += 1;
+    console.log(pontuacaoDesafio);
+  }
+
   if (numeroAtividadeAtual == atividadeAtual.teoria.length - 1) {
     addMoedaTeoria(10, atividadeAtualNumero);
     addNivelJogador(atividadeAtualNumero);
 
     btnfecharModal();
     return;
-  }
-  if (btn == atividadeAtual.teoria[0].respostas) {
-    pontuacaoDesafio += 1;
-    console.log(pontuacaoDesafio);
   }
   numeroAtividadeAtual += 1;
   attModalDesafio();
@@ -93,6 +97,26 @@ function desafioTrueFalse() {
     <div>
       <button onclick="respostaCorreta(1)">True</button>
       <button onclick="respostaCorreta(2)">False</button>
+    </div>
+  `;
+}
+
+function desafioMultiplo() {
+  // Pega as respostas
+  let respostas = [...atividadeAtual.teoria[atividadeAtualNumero].respostas];
+
+  // Embaralha usando Fisher-Yates
+  for (let i = respostas.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [respostas[i], respostas[j]] = [respostas[j], respostas[i]];
+  }
+
+  // Renderiza os botões
+  DesafioModalPergunta.innerHTML += `
+    <div>
+      ${respostas
+        .map((r) => `<button onclick="respostaCorreta('${r}')">${r}</button>`)
+        .join("")}
     </div>
   `;
 }

@@ -65,9 +65,21 @@ function pegarAtividades() {
       ListaTeoriaEconomiaCircular
     ),
     new Atividade("pratica", "Reciclagem", "haltere.png", [
-      new Desafio("TrueAndFalse", "Latinhas são feitas de metal?", 1),
-      new Desafio("TrueAndFalse", "Papel pode ser amassado?", 2),
-      new Desafio("TrueAndFalse", "radiação é bacana?", 1),
+      new Desafio("TrueAndFalse", "Latinhas são feitas de metal?", [1]),
+      new Desafio("TrueAndFalse", "Papel pode ser amassado?", [2]),
+      new Desafio("Multiplo", "Qual energia não renovavel", [
+        "Petroleo",
+        "Eolica",
+        "Solar",
+        "Hidraulica",
+      ]),
+      new Desafio("TrueAndFalse", "Papel pode ser amassado?", [2]),
+      new Desafio("Multiplo", "Qual energia não renovavel", [
+        "Petroleo",
+        "Eolica",
+        "Solar",
+        "Hidraulica",
+      ]),
     ]),
   ];
 }
