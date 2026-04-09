@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+
+    <link rel="stylesheet" href="/src/styles/login.css" />
+  </head>
+  <body>
+    <div class="theme">
+      <label class="switch">
+        <input type="checkbox" onclick="trocarTema()" />
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <div class="login-box">
+      <h1>Entrar</h1>
+
+      <form id="login-form">
+        <input type="email" placeholder="E-mail" id="login-email-input" />
+        <input type="password" placeholder="Senha" id="login-senha-input" />
+        <button type="submit" id="login-button">Entrar</button>
+      </form>
+    </div>
+  </body>
+  <script src="/src/scripts/services/login.js"></script>
+</html>
