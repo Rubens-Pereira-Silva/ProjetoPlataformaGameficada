@@ -10,14 +10,13 @@ const DesafioDialog = document.getElementById("DesafioDialog");
 const DesafioModalTitulo = document.getElementById("DesafioModalTitulo");
 const DesafioModalPergunta = document.getElementById("DesafioModalPerfunta");
 
-let atividades = pegarAtividades();
-
+let atividades;
 let atividadeAtual;
 let atividadeAtualNumero;
 let numeroAtividadeAtual = 0;
 
-function verificarNivel(nivelAtt) {
-  const jogador = statusJogador();
+async function verificarNivel(nivelAtt) {
+  const jogador = await statusJogador();
   if (jogador.nivel >= nivelAtt) {
     return true;
   }
@@ -26,6 +25,7 @@ function verificarNivel(nivelAtt) {
 
 //Botões de abrir os models
 function btnteoria(nivelAtt) {
+  console.log(verificarNivel(nivelAtt));
   if (verificarNivel(nivelAtt)) {
     atividadeAtualNumero = nivelAtt;
     numeroAtividadeAtual = 0;
@@ -141,7 +141,10 @@ function mudarPaginaTeoria(lado) {
 
 //pagina Desafio
 
-function init() {
+async function init() {
+  atividades = await pegarAtividades();
+  console.log(atividades);
+
   for (let i = 0; i < atividades.length; i++) {
     const atividade = atividades[i];
 

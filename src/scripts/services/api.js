@@ -1,7 +1,7 @@
 let jogador = {
   nome: "Jogador Bom",
   moedas: 0,
-  nivel: 4,
+  nivel: 10,
 };
 //Funções do jogador
 
@@ -53,39 +53,29 @@ class Desafio {
   }
 }
 
-function pegarAtividades() {
-  return [
-    new Atividade("teoria", "Reciclagem", "livro.png", ListaTeoriaTeste),
-    new Atividade("teoria", "Reciclagem 2 ", "livro.png", ListaTeoriaTeste),
-    new Atividade("teoria", "Reutilizar", "livro.png", ListaTeoriaTeste),
-    new Atividade(
-      "teoria",
-      "Economia Circular",
-      "livro.png",
-      ListaTeoriaEconomiaCircular
-    ),
-    new Atividade("pratica", "Reciclagem", "haltere.png", [
-      new Desafio("TrueAndFalse", "Latinhas são feitas de metal?", [1]),
-      new Desafio("TrueAndFalse", "Papel pode ser amassado?", [2]),
-      new Desafio("Multiplo", "Qual energia não renovavel", [
-        "Petroleo",
-        "Eolica",
-        "Solar",
-        "Hidraulica",
-      ]),
-      new Desafio("TrueAndFalse", "Papel pode ser amassado?", [2]),
-      new Desafio("Multiplo", "Qual energia não renovavel", [
-        "Petroleo",
-        "Eolica",
-        "Solar",
-        "Hidraulica",
-      ]),
-    ]),
-  ];
+const url = "http://localhost:8080";
+
+async function pegarAtividades() {
+  const res = await fetch(url + "/atividade/all", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await res.json();
+  console.log(data);
+  return data;
 }
 
-function statusJogador() {
-  return {
-    nivel: 6,
-  };
+async function statusJogador() {
+  console.log(localStorage.getItem("ID"));
+  const res = await fetch(url + "/usuario/id=" + localStorage.getItem("ID"), {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
+  const data = await res.json();
+
+  return data;
 }

@@ -15,10 +15,12 @@ async function login(email, senha) {
   const data = await res.json();
 
   if (data != null) {
-    localStorage.setItem("ID", data);
+    localStorage.setItem("ID", data.id);
     console.log(localStorage.getItem("ID"));
+    open("/src/pages/atividades.html");
+  } else {
+    localStorage.removeItem("ID");
   }
-  return data;
 }
 
 const form = document.getElementById("login-form");
