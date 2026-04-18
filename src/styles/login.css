@@ -1,8 +1,39 @@
+:root {
+  --primaria: green;
+  --secundaria: blue;
+  --texto: black;
+}
+
+.light {
+  --primaria: green;
+  --secundaria: blue;
+  --texto: black;
+}
+
+.dark {
+  --primaria: black;
+  --secundaria: blue;
+  --texto: white;
+}
+
+.rose {
+  --primaria: pink;
+  --secundaria: blue;
+  --texto: red;
+}
+
+.roxo {
+  --primaria: purple;
+  --secundaria: blue;
+  --texto: pink;
+}
+
 body {
   width: 100%;
   height: 100vh;
   font-family: "poppins", sans-serif;
-  background-color: green;
+  background-color: var(--primaria);
+  color: var(--texto);
   transition: 0.5s;
   display: flex;
   justify-content: center;
@@ -18,7 +49,7 @@ body {
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   width: 25%;
-  height: 200px;
+  height: 270px;
   margin: auto;
   padding: 20px 30px 20px 30px;
   transition: 0.5s;
@@ -26,6 +57,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 5px;
 }
 
 form {

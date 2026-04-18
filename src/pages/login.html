@@ -7,22 +7,32 @@
 
     <link rel="stylesheet" href="/src/styles/login.css" />
   </head>
-  <body>
+  <body class="rose">
     <div class="theme">
       <label class="switch">
-        <input type="checkbox" onclick="trocarTema()" />
+        <button onclick="trocarTema()">trocarTema</button>
         <span class="slider"></span>
       </label>
     </div>
 
     <div class="login-box">
-      <h1>Entrar</h1>
+      <h1 id="titulo">Login</h1>
 
       <form id="login-form">
         <input type="email" placeholder="E-mail" id="login-email-input" />
         <input type="password" placeholder="Senha" id="login-senha-input" />
         <button type="submit" id="login-button">Entrar</button>
       </form>
+
+      <form id="create-form" style="display: none">
+        <input type="text" placeholder="nome" id="create-nome-input" />
+        <input type="email" placeholder="E-mail" id="create-email-input" />
+        <input type="password" placeholder="Senha" id="create-senha-input1" />
+        <input type="password" placeholder="Senha" id="create-senha-input2" />
+        <button type="submit" id="create-button">Entrar</button>
+      </form>
+
+      <button onclick="trocarTela()">criar conta</button>
     </div>
   </body>
   <script src="/src/scripts/services/login.js"></script>
