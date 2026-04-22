@@ -24,9 +24,10 @@ async function verificarNivel(nivelAtt) {
 }
 
 //Botões de abrir os models
-function btnteoria(nivelAtt) {
-  console.log(verificarNivel(nivelAtt));
-  if (verificarNivel(nivelAtt)) {
+async function btnteoria(nivelAtt) {
+  const nivelCorreto = await verificarNivel(nivelAtt);
+  console.log(nivelCorreto);
+  if (nivelCorreto) {
     atividadeAtualNumero = nivelAtt;
     numeroAtividadeAtual = 0;
     atividadeAtual = atividades[nivelAtt];

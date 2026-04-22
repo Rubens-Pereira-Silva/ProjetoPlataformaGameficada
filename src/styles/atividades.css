@@ -1,3 +1,7 @@
+body{
+  background-color: var(--primaria);
+}
+
 #atividades {
   width: 100%;
   display: flex;
@@ -83,7 +87,7 @@
   scale: 1.3;
 }
 .teoria {
-  background-color: lawngreen;
+  background-color: var(--teoria);
 }
 .pratica {
   background-color: red;

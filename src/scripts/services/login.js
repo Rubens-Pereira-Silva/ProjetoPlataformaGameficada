@@ -27,7 +27,7 @@ async function login(email, senha) {
   const data = await res.json();
 
   if (data != null) {
-    localStorage.setItem("ID", data.id);
+    localStorage.setItem("ID", data);
     console.log(localStorage.getItem("ID"));
     open("/src/pages/atividades.html");
   } else {

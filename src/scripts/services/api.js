@@ -69,13 +69,13 @@ async function pegarAtividades() {
 
 async function statusJogador() {
   console.log(localStorage.getItem("ID"));
-  const res = await fetch(url + "/usuario/id=" + localStorage.getItem("ID"), {
+  const res = await fetch(url + "/usuario?id=" + localStorage.getItem("ID"), {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
     },
   });
   const data = await res.json();
-
+  console.log(data);
   return data;
 }

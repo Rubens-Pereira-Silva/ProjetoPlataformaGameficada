@@ -1,0 +1,31 @@
+:root {
+  --primaria: green;
+  --secundaria: blue;
+  --texto: black;
+  --teoria: black;
+}
+
+.light {
+  --primaria: green;
+  --secundaria: blue;
+  --texto: black;
+}
+
+.dark {
+  --primaria: black;
+  --secundaria: blue;
+  --texto: white;
+  --teoria: cyan;
+}
+
+.rose {
+  --primaria: pink;
+  --secundaria: blue;
+  --texto: red;
+}
+
+.roxo {
+  --primaria: purple;
+  --secundaria: blue;
+  --texto: pink;
+}
