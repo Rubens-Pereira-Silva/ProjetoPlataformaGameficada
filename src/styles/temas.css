@@ -6,14 +6,14 @@
 }
 
 .light {
-  --primaria: green;
-  --secundaria: blue;
+  --primaria: lightgray;
+  --secundaria: whitesmoke;
   --texto: black;
 }
 
 .dark {
-  --primaria: black;
-  --secundaria: blue;
+  --primaria: rgb(26, 29, 29);
+  --secundaria: black;
   --texto: white;
   --teoria: cyan;
 }
