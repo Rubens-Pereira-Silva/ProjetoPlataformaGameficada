@@ -18,14 +18,28 @@
   --teoria: cyan;
 }
 
-.rose {
-  --primaria: pink;
-  --secundaria: blue;
-  --texto: red;
+
+/* Temas Dark */
+.darkgreen{
+  --primaria: #22C55E;
+  --secundaria: #1F2937;
+  --texto: #ECFDF5;
 }
 
-.roxo {
-  --primaria: purple;
-  --secundaria: blue;
-  --texto: pink;
+.darkpurple{
+  --primaria: #7C3AED;
+  --secundaria: #1E292C;
+  --texto: #F3F4F6;
+}
+.darkblue{
+  --primaria: #2CABAA;
+  --secundaria: #161F48;
+  --texto: #CAD5DE;
+}
+/* Temas Light */
+
+.lightblue{
+  --primaria: #6D94C5;
+  --secundaria: #CBDCED;
+  --texto: LIGHTGRAY;
 }
