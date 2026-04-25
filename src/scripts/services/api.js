@@ -53,7 +53,7 @@ class Desafio {
   }
 }
 
-const url = "http://localhost:8080";
+const url = "https://projetoplataformaunip-api-1.onrender.com";
 
 async function pegarAtividades() {
   const res = await fetch(url + "/atividade/all", {
@@ -69,7 +69,7 @@ async function pegarAtividades() {
 
 async function statusJogador() {
   console.log(localStorage.getItem("ID"));
-  const res = await fetch(url + "/usuario?id=" + localStorage.getItem("ID"), {
+  const res = await fetch(url + "/usuario/" + localStorage.getItem("ID"), {
     method: "GET",
     headers: {
       "Content-Type": "application/json",

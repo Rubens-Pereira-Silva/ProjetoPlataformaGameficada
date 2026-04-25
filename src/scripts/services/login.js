@@ -1,4 +1,4 @@
-const url = "http://localhost:8080";
+const url = "https://projetoplataformaunip-api-1.onrender.com";
 
 //Trocar tema
 let tema = 0;
