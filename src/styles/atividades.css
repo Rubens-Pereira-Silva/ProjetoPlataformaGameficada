@@ -1,4 +1,4 @@
-body{
+body {
   background-color: var(--primaria);
 }
 
@@ -103,4 +103,31 @@ body{
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+/* Dialog Teoria */
+
+#teoriaDialog {
+  border: none;
+  border-radius: 12px;
+  color: var(--texto);
+  background-color: var(--secundaria);
+}
+
+#teoriaDialog .btn-fecharModal {
+  border: none;
+  border-radius: 12px;
+  background-color: red;
+  padding: 5px;
+  font-weight: 900;
+  color: white;
+}
+
+#teoriaDialog .modal-btns button {
+  background-color: var(--primaria);
+  border: none;
+  border-radius: 12px;
+  width: 15%;
+  padding: 5px;
+  color: var(--texto);
 }
