@@ -66,3 +66,9 @@ h2 {
     border-radius:15px;
     margin: 20px 0; /* Espaço externo */
 }
+
+.linkdojogo {
+    color: var(--texto);
+    text-decoration: underline;
+    font-weight: bold;
+}
