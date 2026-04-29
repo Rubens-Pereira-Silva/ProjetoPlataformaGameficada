@@ -150,12 +150,25 @@ async function init() {
     const atividade = atividades[i];
 
     sectionAtividades.innerHTML += `
+      <!--
       <button onClick="btn${atividade.type}(${i})" class="atividade">
           <div class="circuloAtividade ${atividade.type}">
             <img src="../images/${atividade.icon}" alt="" />
           </div>
           <p>${atividade.nome}</p>
         </button>
+        -->
+        <div class="atividade">
+          <img src="../images/${atividade.icon}"/>
+          <div>
+            <p>${atividade.nome}</p>
+            <p>${atividade.type}</p>
+            <button onClick="btn${atividade.type}(${i})">Estudar</button>
+          </div>
+
+        </div>
+
+
     `;
   }
 }
