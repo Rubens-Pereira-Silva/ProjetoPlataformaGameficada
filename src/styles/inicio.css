@@ -11,18 +11,22 @@ body {
     line-height: 1.6; 
     color: #333; 
     background-color: var(--secundaria); 
-    padding: 20px; 
+}
+
+main {
+    padding: 20px;
 }
 
 /* Menu do topo */
 nav {
+    top: 0px;
     display: flex; /* Deixa em linha */
     justify-content: space-evenly; /* Espaçamento */
     width: 100%;
     background-color: var(--primaria);
     padding: 15px 0; /* Espaço vertical no menu */
-    margin-bottom: 30px; /* Espaço abaixo */
     border-radius: 5px; /* Cantos arredondados */
+    position: fixed;
 }
 
 /* Links do menu do topo */
@@ -71,4 +75,8 @@ h2 {
     color: var(--texto);
     text-decoration: underline;
     font-weight: bold;
+}
+
+#inicio {
+    margin-top: 70px;
 }
