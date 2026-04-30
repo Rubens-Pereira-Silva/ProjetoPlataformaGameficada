@@ -12,7 +12,7 @@ function trocarTema() {
   document.body.classList.add(listaTemas[tema]);
 }
 
-async function login(email, senha) {
+async function login(email, senha) { try {
   const res = await fetch(url + "/usuario/login", {
     method: "POST",
     headers: {
@@ -25,14 +25,16 @@ async function login(email, senha) {
   });
 
   const data = await res.json();
-
+   
   if (data != null) {
     localStorage.setItem("ID", data);
     console.log(localStorage.getItem("ID"));
     open("/src/pages/atividades.html");
   } else {
     localStorage.removeItem("ID");
-  }
+  } } catch (parseError) {
+    alert("E-mail ou senha incorreta")
+  };
 }
 
 async function create(nome, email, senha1, senha2) {
