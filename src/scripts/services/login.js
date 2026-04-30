@@ -89,16 +89,20 @@ formCriar.addEventListener("submit", function (event) {
 let inTelaLogin = true;
 
 const titulo = document.getElementById("titulo");
+const btnTrocarTela = document.getElementById("btn-trocarTela");
+
 function trocarTela() {
   if (inTelaLogin) {
     form.style = "display: none";
     formCriar.style = "display: flex";
     titulo.innerText = "Registrar";
+    btnTrocarTela.innerText = "Acessar conta"
     inTelaLogin = false;
     return;
   }
   form.style = "display: flex";
   formCriar.style = "display: none";
   titulo.innerText = "Login";
+  btnTrocarTela.innerText = "Criar conta"
   inTelaLogin = true;
 }

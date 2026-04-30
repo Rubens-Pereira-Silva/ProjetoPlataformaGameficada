@@ -18,8 +18,8 @@ body {
   -webkit-backdrop-filter: blur(13.5px);
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  width: 25%;
-  height: 270px;
+  width: 30%;
+  height: 320px;
   margin: auto;
   padding: 20px 30px 20px 30px;
   transition: 0.5s;
@@ -49,6 +49,18 @@ button {
   border-radius: 20px;
   border: none;
   cursor: pointer;
+  transition: 0.25s;
+}
+
+button:hover {
+  color: white;
+  background-color: var(--primaria);
+
+}
+
+#btn-trocarTela {
+  background-color: transparent;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {

@@ -11,7 +11,7 @@
   <body class="roxo">
     <div class="theme">
       <label class="switch">
-        <button onclick="trocarTema()">trocarTema</button>
+        <button onclick="trocarTema()">Trocar tema</button>
         <span class="slider"></span>
       </label>
     </div>
@@ -20,20 +20,21 @@
       <h1 id="titulo">Login</h1>
 
       <form id="login-form">
-        <input type="email" placeholder="E-mail" id="login-email-input" />
-        <input type="password" placeholder="Senha" id="login-senha-input" />
+        <input type="email" placeholder="E-mail" id="login-email-input" required/>
+        <input type="password" placeholder="Senha" id="login-senha-input" required/>
         <button type="submit" id="login-button">Entrar</button>
       </form>
 
       <form id="create-form" style="display: none">
-        <input type="text" placeholder="nome" id="create-nome-input" />
-        <input type="email" placeholder="E-mail" id="create-email-input" />
-        <input type="password" placeholder="Senha" id="create-senha-input1" />
-        <input type="password" placeholder="Senha" id="create-senha-input2" />
-        <button type="submit" id="create-button">Entrar</button>
+        <input type="text" placeholder="Nome" id="create-nome-input" required />
+        <input type="email" placeholder="E-mail" id="create-email-input" required/>
+        <input type="password" placeholder="Senha" id="create-senha-input1" required/>
+        <input type="password" placeholder="Senha" id="create-senha-input2" required/>
+        <button type="submit" id="create-button">Criar conta</button>
       </form>
 
-      <button onclick="trocarTela()">criar conta</button>
+      <button id="btn-trocarTela" onclick="trocarTela()">Criar conta</button>
+      
     </div>
   </body>
   <script src="/src/scripts/services/login.js"></script>
