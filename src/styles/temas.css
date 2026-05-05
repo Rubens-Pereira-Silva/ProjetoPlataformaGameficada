@@ -1,6 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
   font-family: roboto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -23,28 +26,27 @@
   --teoria: cyan;
 }
 
-
 /* Temas Dark */
-.darkgreen{
-  --primaria: #22C55E;
-  --secundaria: #1F2937;
-  --texto: #ECFDF5;
+.darkgreen {
+  --primaria: #22c55e;
+  --secundaria: #1f2937;
+  --texto: #ecfdf5;
 }
 
-.darkpurple{
-  --primaria: #7C3AED;
-  --secundaria: #1E292C;
-  --texto: #F3F4F6;
+.darkpurple {
+  --primaria: #7c3aed;
+  --secundaria: #1e292c;
+  --texto: #f3f4f6;
 }
-.darkblue{
-  --primaria: #2CABAA;
-  --secundaria: #161F48;
-  --texto: #CAD5DE;
+.darkblue {
+  --primaria: #2cabaa;
+  --secundaria: #161f48;
+  --texto: #cad5de;
 }
 /* Temas Light */
 
-.lightblue{
-  --primaria: #6D94C5;
-  --secundaria: #CBDCED;
+.lightblue {
+  --primaria: #6d94c5;
+  --secundaria: #cbdced;
   --texto: LIGHTGRAY;
 }

@@ -152,7 +152,7 @@ async function init() {
     sectionAtividades.innerHTML += `
     
         <div class="atividade">
-          <img src="../images/${atividade.icon}"/>
+          <img src="../images/${atividade.type}.svg">
           <div>
             <p>${atividade.nome}</p>
             <p>${atividade.type}</p>

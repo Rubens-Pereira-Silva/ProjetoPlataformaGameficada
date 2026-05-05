@@ -8,12 +8,15 @@
     <link rel="stylesheet" href="/src/styles/temas.css" />
     <link rel="stylesheet" href="../styles/atividades.css" />
   </head>
-  <body class="darkpurple">
+  <body class="dark">
+    <header>
+      <button onclick="" id="btnConfig">
+        <img src="../images/configuracao.svg" alt="" />
+      </button>
+    </header>
+
     <main>
-      <header></header>
-      <section id="atividades">
-       
-      </section>
+      <section id="atividades"></section>
       <dialog id="teoriaDialog">
         <button class="btn-fecharModal" onclick="btnfecharModal()">X</button>
         <h3 id="teoriaModalTitulo"></h3>
@@ -30,6 +33,12 @@
         <button class="btn-fecharModal" onclick="btnfecharModal()">X</button>
         <h3 id="DesafioModalTitulo"></h3>
         <p id="DesafioModalPerfunta">Desafios</p>
+      </dialog>
+
+      <dialog id="configDialog">
+        <input type="text" />
+        <button id="btnLogout">Sair</button>
+        <button id="btnFecharConfig">X</button>
       </dialog>
     </main>
 
