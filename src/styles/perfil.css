@@ -1,10 +1,14 @@
 main{
-    width: 100%;
+    width: 80%;
     height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20px;
+    background-color: var(--texto);
 }
 
 main img{
