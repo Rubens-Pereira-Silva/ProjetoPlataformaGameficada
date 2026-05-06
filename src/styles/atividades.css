@@ -1,20 +1,3 @@
-body {
-  width: 100%;
-  height: 100vh;
-  background-color: var(--primaria);
-}
-
-header {
-  width: 100%;
-  height: 110px;
-  background-color: var(--secundaria);
-  margin-bottom: 20px;
-  padding: 5px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
 
 main {
   width: 100%;

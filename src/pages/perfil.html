@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+
+    <link rel="stylesheet" href="/src/styles/temas.css" />
+    <link rel="stylesheet" href="/src/styles/header.css" />
+    <link rel="stylesheet" href="/src/styles/perfil.css">
+</head>
+<body class="dark">
+    <header id="header">
+
+    </header><script src="../scripts/services/header.js"></script>
+
+    <main>
+        <img src="../images/perfil.png" alt="">
+
+        <h3 id="nome">Nome nomes</h3>
+        <p id="nivel">Nivel: 0</p>
+        <p id="moedas">Moedas: 0</p>
+    </main>
+
+    <script src="../scripts/services/api.js"></script>
+
+    <script>
+        async function init() {
+            const data = await statusJogador()
+            
+            document.getElementById("nome").innerText = data.nome
+
+            document.getElementById("nivel").innerText = "Nivel: " + data.nivel
+
+            document.getElementById("moedas").innerText = "🪙: " +  data.moedas
+        }
+        init()
+        
+    </script>
+</body>
+    
+</html>

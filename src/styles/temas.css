@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primaria);
+}
+
 :root {
   --primaria: green;
   --secundaria: blue;
