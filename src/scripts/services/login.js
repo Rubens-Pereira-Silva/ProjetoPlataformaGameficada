@@ -1,3 +1,5 @@
+document.body.className = localStorage.getItem("Tema");
+
 const url = "https://projetoplataformaunip-api-1.onrender.com";
 
 //Trocar tema
@@ -12,29 +14,31 @@ function trocarTema() {
   document.body.classList.add(listaTemas[tema]);
 }
 
-async function login(email, senha) { try {
-  const res = await fetch(url + "/usuario/login", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email: email,
-      senha: senha,
-    }),
-  });
+async function login(email, senha) {
+  try {
+    const res = await fetch(url + "/usuario/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        senha: senha,
+      }),
+    });
 
-  const data = await res.json();
-   
-  if (data != null) {
-    localStorage.setItem("ID", data);
-    console.log(localStorage.getItem("ID"));
-    open("/src/pages/atividades.html");
-  } else {
-    localStorage.removeItem("ID");
-  } } catch (parseError) {
-    alert("E-mail ou senha incorreta")
-  };
+    const data = await res.json();
+
+    if (data != null) {
+      localStorage.setItem("ID", data);
+      console.log(localStorage.getItem("ID"));
+      open("/src/pages/atividades.html");
+    } else {
+      localStorage.removeItem("ID");
+    }
+  } catch (parseError) {
+    alert("E-mail ou senha incorreta");
+  }
 }
 
 async function create(nome, email, senha1, senha2) {
@@ -98,13 +102,13 @@ function trocarTela() {
     form.style = "display: none";
     formCriar.style = "display: flex";
     titulo.innerText = "Registrar";
-    btnTrocarTela.innerText = "Acessar conta"
+    btnTrocarTela.innerText = "Acessar conta";
     inTelaLogin = false;
     return;
   }
   form.style = "display: flex";
   formCriar.style = "display: none";
   titulo.innerText = "Login";
-  btnTrocarTela.innerText = "Criar conta"
+  btnTrocarTela.innerText = "Criar conta";
   inTelaLogin = true;
 }

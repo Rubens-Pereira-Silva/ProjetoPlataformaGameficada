@@ -143,6 +143,7 @@ function mudarPaginaTeoria(lado) {
 //pagina Desafio
 
 async function init() {
+  document.body.className = localStorage.getItem("Tema");
   atividades = await pegarAtividades();
   console.log(atividades);
 
