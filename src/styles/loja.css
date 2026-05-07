@@ -1,0 +1,38 @@
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: center;
+}
+
+.itemLoja{
+    width: 150px;
+    height: 170px;
+    background-color: var(--secundaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.itemLoja img{
+    width: 70%;
+}
+
+.itemLoja button{
+    width: 75px;
+    background-color: green;
+    border: none;
+    border-radius: 8px;
+    padding: 3px;
+    transition: 0.25s;
+}
+
+.itemLoja button:hover{
+    background-color: greenyellow;;
+}
