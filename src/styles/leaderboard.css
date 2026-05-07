@@ -5,10 +5,26 @@ main {
 }
 
 li {
+  width: 300px;
+  height: 100px;
   background-color: var(--secundaria);
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  transition: 0.25s;
+}
+
+li img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Hovers */
+
+li:hover {
+  scale: 1.2;
+  margin: 40px 10px 40px 10px;
 }

@@ -29,7 +29,7 @@
         data.forEach((jogador) => {
           document.getElementById(
             "listaJogadores"
-          ).innerHTML += `<li><p>${jogador.nome}</p>  <p>${jogador.moedas}</p></li>`;
+          ).innerHTML += `<li><img src="../images/iconsJogador/${jogador.icon}.png"><p>${jogador.nome}</p>  <p>${jogador.moedas}</p></li>`;
         });
       }
       init();
