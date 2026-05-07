@@ -1,12 +1,14 @@
-main{
-    align-self: center;
-    justify-self: center;
-    color: var(--texto)
+main {
+  align-self: center;
+  justify-self: center;
+  color: var(--texto);
 }
 
-li{
-    background-color: var(--secundaria);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 20px;
+li {
+  background-color: var(--secundaria);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
 }

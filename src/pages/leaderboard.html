@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leaderboard</title>
 
     <link rel="stylesheet" href="/src/styles/temas.css" />
     <link rel="stylesheet" href="/src/styles/header.css" />
-    <link rel="stylesheet" href="/src/styles/leaderboard.css">
-</head>
-<body class="dark">
-    <header id="header">
-        
-    </header><script src="../scripts/services/header.js"></script>
+    <link rel="stylesheet" href="/src/styles/leaderboard.css" />
+  </head>
+  <body class="dark">
+    <header id="header"></header>
+    <script src="../scripts/services/header.js"></script>
     <main>
-        <h1>Top 10 Jogadores</h1>
-        <ol id="listaJogadores">
-            
-        </ol>
+      <h1>Top 10 Jogadores</h1>
+      <ol id="listaJogadores"></ol>
     </main>
     <script>
-        async function init(){
-            data = await [["Rubens", 54], ["Gabriel", 49], ["Giovanna", 47], ["Lucas", 35]]
+      async function init() {
+        const res = await fetch(
+          "https://projetoplataformaunip-api-1.onrender.com/usuario/top"
+        );
+        const data = await res.json();
 
-            document.getElementById("listaJogadores").innerHTML = ``
+        console.log(data);
+        document.getElementById("listaJogadores").innerHTML = ``;
 
-            data.forEach(jogador => {
-                document.getElementById("listaJogadores").innerHTML += `<li>${jogador[0]} : ${jogador[1]}</li>`
-            });
-            
-        }
-            init()
+        data.forEach((jogador) => {
+          document.getElementById(
+            "listaJogadores"
+          ).innerHTML += `<li><p>${jogador.nome}</p>  <p>${jogador.moedas}</p></li>`;
+        });
+      }
+      init();
     </script>
-</body>
-    
+  </body>
 </html>
