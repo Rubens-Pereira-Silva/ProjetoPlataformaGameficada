@@ -26,14 +26,12 @@ async function verificarNivel(nivelAtt) {
 //Botões de abrir os models
 async function btnteoria(nivelAtt) {
   const nivelCorreto = await verificarNivel(nivelAtt);
-  console.log(nivelCorreto);
   if (nivelCorreto) {
-    atividadeAtualNumero = nivelAtt;
-    numeroAtividadeAtual = 0;
-    atividadeAtual = atividades[nivelAtt];
-    teoriaDialog.showModal();
-    document.body.style.overflow = "hidden";
-    attModal();
+    await localStorage.setItem(
+      "atividade",
+      JSON.stringify(atividades[nivelAtt])
+    );
+    window.location.replace("teoria.html");
   }
 }
 function btnpratica(nivelAtt) {
