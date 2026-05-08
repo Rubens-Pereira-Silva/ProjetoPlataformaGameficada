@@ -25,6 +25,8 @@
           <option value="darkpurple">darkpurple</option>
         </select>
       </div>
+
+      <button id="btnLogout">Sair da conta</button>
     </main>
 
     <script>
@@ -36,6 +38,11 @@
 
         document.body.className = novoTema;
       });
+
+      document.getElementById("btnLogout").onclick = () => {
+        localStorage.removeItem("ID");
+        window.location.replace("login.html");
+      };
     </script>
 
     <script src="../scripts/services/header.js"></script>

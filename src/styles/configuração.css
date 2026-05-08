@@ -4,10 +4,18 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 50px;
 }
 
 div {
   margin-top: 30px;
+}
+
+button {
+  background-color: var(--secundaria);
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
 }
 
 .div-temas {
@@ -27,4 +35,8 @@ div {
 
 .div-temas option {
   color: black;
+}
+
+#btnLogout {
+  background-color: red;
 }
