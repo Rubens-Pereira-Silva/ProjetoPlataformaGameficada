@@ -1,14 +1,23 @@
 main {
+  width: 100%;
   align-self: center;
   justify-self: center;
   color: var(--texto);
+}
+
+ol {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
 
 li {
   width: 300px;
   height: 100px;
   background-color: var(--secundaria);
-  margin: 10px;
+  margin-top: 20px;
   padding: 10px;
   border-radius: 20px;
   display: flex;

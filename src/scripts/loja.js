@@ -1,3 +1,5 @@
+document.body.className = localStorage.getItem("Tema");
+
 const itemsVenda = [
   "pirata",
   "ninja",

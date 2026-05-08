@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configuração</title>
+
+    <link rel="stylesheet" href="/src/styles/temas.css" />
+    <link rel="stylesheet" href="/src/styles/header.css" />
+    <link rel="stylesheet" href="/src/styles/configuração.css" />
+  </head>
+  <body class="dark">
+    <header id="header"></header>
+    <main>
+      <h1>Configurações</h1>
+
+      <div class="div-temas">
+        <h3>Temas</h3>
+        <select id="inputListaTemas" name="inputTema">
+          <option value="light" selected>light</option>
+          <option value="lightblue">lightblue</option>
+          <option value="dark">dark</option>
+          <option value="darkgreen">darkgreen</option>
+          <option value="darkblue">darkblue</option>
+          <option value="darkpurple">darkpurple</option>
+        </select>
+      </div>
+    </main>
+
+    <script>
+      const inputListaTemas = document.getElementById("inputListaTemas");
+      inputListaTemas.addEventListener("change", (event) => {
+        const novoTema = event.target.value;
+
+        localStorage.setItem("Tema", novoTema);
+
+        document.body.className = novoTema;
+      });
+    </script>
+
+    <script src="../scripts/services/header.js"></script>
+  </body>
+</html>

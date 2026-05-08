@@ -1,0 +1,30 @@
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div {
+  margin-top: 30px;
+}
+
+.div-temas {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.div-temas select {
+  color: black;
+  width: 150px;
+  height: 30px;
+  border-radius: 20px;
+}
+
+.div-temas option {
+  color: black;
+}
