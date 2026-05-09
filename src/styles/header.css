@@ -10,7 +10,18 @@ header {
   justify-content: space-around;
 }
 
-header img{
+header button {
+  padding: 10px;
+  transition: 0.25s;
+  border-radius: 50%;
+}
+
+header img {
   width: 40px;
   height: 40px;
+}
+
+header button:hover {
+  scale: 1.2;
+  background-color: rgb(9, 49, 0);
 }
