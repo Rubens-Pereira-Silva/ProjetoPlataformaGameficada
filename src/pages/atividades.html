@@ -6,36 +6,14 @@
     <title>Atividades</title>
 
     <link rel="stylesheet" href="/src/styles/temas.css" />
-    <link rel="stylesheet" href="/src/styles/atividades.css" />
     <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="/src/styles/atividades.css" />
   </head>
   <body class="dark">
     <header id="header"></header>
 
     <main>
       <section id="atividades"></section>
-      <dialog id="teoriaDialog">
-        <button class="btn-fecharModal" onclick="btnfecharModal()">X</button>
-        <h3 id="teoriaModalTitulo"></h3>
-        <p id="teoriaModalParagrafo">
-          teoria mais teoria com teorias teoricas teorizadas
-        </p>
-        <div class="modal-btns">
-          <button onclick="mudarPaginaTeoria(1)"><- Anterior</button>
-          <button onclick="mudarPaginaTeoria(2)">Próximo -></button>
-        </div>
-      </dialog>
-
-      <dialog id="DesafioDialog">
-        <button class="btn-fecharModal" onclick="btnfecharModal()">X</button>
-        <h3 id="DesafioModalTitulo"></h3>
-        <p id="DesafioModalPerfunta">Desafios</p>
-      </dialog>
-
-      <dialog id="configDialog">
-        <button id="btnLogout">Sair</button>
-        <button id="btnFecharConfig">X</button>
-      </dialog>
     </main>
 
     <script src="../scripts/services/api.js"></script>
