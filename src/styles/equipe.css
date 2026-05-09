@@ -16,6 +16,7 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  transition: 0.5s;
 }
 
 .pessoa img {
@@ -27,4 +28,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.pessoa:hover {
+  scale: 1.1;
+  border: 5px solid gold;
 }
