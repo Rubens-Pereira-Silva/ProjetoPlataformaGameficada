@@ -4,6 +4,8 @@ async function init() {
   const jogador = await statusJogador();
   console.log(jogador);
 
+  const atividades = await pegarAtividades();
+
   //Complete a primeira atividade
   if (jogador.nivel == 1) {
     conquistas[0].classList.add("bloqueada");
@@ -19,6 +21,11 @@ async function init() {
   //Conclua 5 atividades
   if (jogador.nivel <= 5) {
     conquistas[3].classList.add("bloqueada");
+  }
+
+  //Ultima conquista de completar todas as atividades
+  if (jogador.nivel <= atividades.length) {
+    conquistas[conquistas.length - 1].classList.add("bloqueada");
   }
 }
 
