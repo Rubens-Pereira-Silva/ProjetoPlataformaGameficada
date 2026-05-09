@@ -16,7 +16,7 @@
 
       <h2>Tutorial</h2>
 
-      <a href="/src/pages/tutorial.html"><img src="/src/images/lupa.png"></a>
+      <a href="/src/pages/tutorial.html"><img src="/src/images/lupa.png" /></a>
 
       <div class="div-temas">
         <h3>Temas</h3>
@@ -29,8 +29,8 @@
           <option value="darkpurple">darkpurple</option>
         </select>
       </div>
-
       <button id="btnLogout">Sair da conta</button>
+      <button id="btnEquipe">Conhecer Equipe</button>
     </main>
 
     <script>
@@ -46,6 +46,10 @@
       document.getElementById("btnLogout").onclick = () => {
         localStorage.removeItem("ID");
         window.location.replace("login.html");
+      };
+
+      document.getElementById("btnEquipe").onclick = () => {
+        window.location.replace("equipe.html");
       };
     </script>
 
