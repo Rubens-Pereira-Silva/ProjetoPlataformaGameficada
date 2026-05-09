@@ -14,13 +14,14 @@ function attAtividade() {
 }
 attAtividade();
 
-function mudarPagina(lado) {
+async function mudarPagina(lado) {
   if (lado == 1) {
     if (atividadeNumero != 0) {
       atividadeNumero -= 1;
     }
   } else {
     if (atividadeNumero == atividade.teoria.length - 1) {
+      await concluirAtividade(atividade.nivel);
       alert("Terminou a atividade");
       window.location.replace("atividades.html");
     } else {

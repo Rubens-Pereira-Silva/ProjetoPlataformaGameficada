@@ -1,7 +1,7 @@
 const desafio = JSON.parse(localStorage.getItem("desafio"));
 const desafioIds = desafio.teoria.map(Number);
 
-let desafioNumero = 0;
+let desafioNumero = 1;
 let acertos = 0;
 let respostaCorreta;
 
@@ -44,7 +44,7 @@ function attAtividade() {
   });
 }
 
-function selecionarResposta(num) {
+async function selecionarResposta(num) {
   if (respostaCorreta == desafio.teoria[desafioNumero].resposta[num]) {
     acertos += 1;
   }
@@ -53,6 +53,7 @@ function selecionarResposta(num) {
   if (desafioNumero == desafio.teoria.length) {
     if (acertos >= desafio.teoria.length / 2) {
       alert("Ganhou");
+      await concluirAtividade(desafio.nivel);
     } else {
       alert("Perdeu");
     }

@@ -143,6 +143,7 @@ async function init() {
   console.log(atividades);
 
   for (let i = 0; i < atividades.length; i++) {
+    atividades[i].nivel = i + 1;
     const atividade = atividades[i];
 
     sectionAtividades.innerHTML += `
