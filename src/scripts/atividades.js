@@ -34,14 +34,11 @@ async function btnteoria(nivelAtt) {
     window.location.replace("teoria.html");
   }
 }
-function btnpratica(nivelAtt) {
-  if (verificarNivel(nivelAtt)) {
-    atividadeAtualNumero = nivelAtt;
-    numeroAtividadeAtual = 0;
-    atividadeAtual = atividades[nivelAtt];
-    DesafioDialog.showModal();
-    document.body.style.overflow = "hidden";
-    attModalDesafio();
+async function btndesafio(nivelAtt) {
+  const nivelCorreto = await verificarNivel(nivelAtt);
+  if (true) {
+    await localStorage.setItem("desafio", JSON.stringify(atividades[nivelAtt]));
+    window.location.replace("desafio.html");
   }
 }
 

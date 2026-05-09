@@ -5,8 +5,14 @@ document.body.className = localStorage.getItem("Tema");
 const header = document.getElementById("header");
 
 header.innerHTML = `
-  <button onclick="" id="btnPerfil">
+      <button onclick="" id="btnPerfil">
         <img src="../images/perfil.png" alt="" />
+      </button>
+      <button onclick="" id="btnAtividades">
+        <img src="../images/atividades.png" alt="" />
+      </button>
+      <button onclick="" id="btnEventos">
+        <img src="../images/eventos.png" alt="" />
       </button>
       <button onclick="" id="btnLoja">
         <img src="../images/loja.png" alt="" />
@@ -24,6 +30,20 @@ const btnPerfil = document.getElementById("btnPerfil");
 
 btnPerfil.onclick = () => {
   window.location.replace("perfil.html");
+};
+
+//Navegação Atividades
+const btnAtividades = document.getElementById("btnAtividades");
+
+btnAtividades.onclick = () => {
+  window.location.replace("atividades.html");
+};
+
+//Navegação Eventos
+const btnEventos = document.getElementById("btnEventos");
+
+btnEventos.onclick = () => {
+  window.location.replace("eventos.html");
 };
 
 //Navegação Leaderboard
