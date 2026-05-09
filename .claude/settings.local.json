@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(Remove-Item \"c:\\\\Users\\\\lucas\\\\Desktop\\\\plataforma gameficada\\\\ProjetoPlataformaGameficada\\\\src\\\\scripts\\\\tutorial.js\")"
-    ]
-  }
-}
