@@ -40,3 +40,8 @@ main button {
 #btnLogout {
   background-color: red;
 }
+
+img{
+  width: 40px;
+  height: 40px;
+}
