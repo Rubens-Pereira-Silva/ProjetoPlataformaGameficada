@@ -26,6 +26,7 @@ main {
   align-items: center;
   justify-content: space-between;
   text-align: center;
+  transition: 0.5s;
 }
 
 .conquista.bloqueada img {
@@ -34,4 +35,14 @@ main {
 
 .conquista img {
   width: 100px;
+}
+
+.conquista:hover {
+  scale: 1.2;
+  border: 3px solid gold;
+}
+
+.conquista.bloqueada:hover {
+  scale: 1.2;
+  border: 3px solid red;
 }

@@ -11,14 +11,17 @@ header.innerHTML = `
       <button onclick="" id="btnAtividades">
         <img src="../images/atividades.png" alt="" />
       </button>
-      <button onclick="" id="btnEventos">
-        <img src="../images/eventos.png" alt="" />
+      <button onclick="" id="btnConquistas">
+        <img src="../images/conquista/conquista.png" alt="" />
       </button>
       <button onclick="" id="btnLoja">
         <img src="../images/loja.png" alt="" />
       </button>
       <button onclick="" id="btnLeaderboard">
         <img src="../images/podio.png" alt="" />
+      </button>
+      <button onclick="" id="btnEventos">
+        <img src="../images/eventos.png" alt="" />
       </button>
       <button onclick="" id="btnConfig">
         <img src="../images/configuracao.svg" alt="" />
@@ -37,6 +40,13 @@ const btnAtividades = document.getElementById("btnAtividades");
 
 btnAtividades.onclick = () => {
   window.location.replace("atividades.html");
+};
+
+//Navegação Eventos
+const btnConquistas = document.getElementById("btnConquistas");
+
+btnConquistas.onclick = () => {
+  window.location.replace("conquistas.html");
 };
 
 //Navegação Eventos
@@ -60,7 +70,7 @@ btnLoja.onclick = () => {
   window.location.replace("loja.html");
 };
 
-//Navegação COnfiguração
+//Navegação Configuração
 const btnConfig = document.getElementById("btnConfig");
 
 btnConfig.onclick = () => {
