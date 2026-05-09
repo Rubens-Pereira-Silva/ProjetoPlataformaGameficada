@@ -1,7 +1,7 @@
 const desafio = JSON.parse(localStorage.getItem("desafio"));
 const desafioIds = desafio.teoria.map(Number);
 
-let desafioNumero = 1;
+let desafioNumero = 0;
 let acertos = 0;
 let respostaCorreta;
 

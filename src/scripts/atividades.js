@@ -17,9 +17,10 @@ let numeroAtividadeAtual = 0;
 
 async function verificarNivel(nivelAtt) {
   const jogador = await statusJogador();
-  if (jogador.nivel >= nivelAtt) {
+  if (jogador.nivel >= nivelAtt + 1) {
     return true;
   }
+  alert("Você não esta no nivel dessa atividade");
   return false;
 }
 
@@ -36,7 +37,7 @@ async function btnteoria(nivelAtt) {
 }
 async function btndesafio(nivelAtt) {
   const nivelCorreto = await verificarNivel(nivelAtt);
-  if (true) {
+  if (nivelCorreto) {
     await localStorage.setItem("desafio", JSON.stringify(atividades[nivelAtt]));
     window.location.replace("desafio.html");
   }
@@ -86,53 +87,6 @@ function respostaCorreta(btn) {
   }
   numeroAtividadeAtual += 1;
   attModalDesafio();
-}
-
-function desafioTrueFalse() {
-  DesafioModalPergunta.innerHTML += `
-    <div>
-      <button onclick="respostaCorreta(1)">True</button>
-      <button onclick="respostaCorreta(2)">False</button>
-    </div>
-  `;
-}
-
-function desafioMultiplo() {
-  // Pega as respostas
-  let respostas = [...atividadeAtual.teoria[atividadeAtualNumero].respostas];
-
-  // Embaralha usando Fisher-Yates
-  for (let i = respostas.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [respostas[i], respostas[j]] = [respostas[j], respostas[i]];
-  }
-
-  // Renderiza os botões
-  DesafioModalPergunta.innerHTML += `
-    <div>
-      ${respostas
-        .map((r) => `<button onclick="respostaCorreta('${r}')">${r}</button>`)
-        .join("")}
-    </div>
-  `;
-}
-
-function mudarPaginaTeoria(lado) {
-  if (lado == 2 && numeroAtividadeAtual == atividadeAtual.teoria.length - 1) {
-    addMoedaTeoria(10, atividadeAtualNumero);
-    addNivelJogador(atividadeAtualNumero);
-
-    btnfecharModal();
-    return;
-  }
-  if (lado == 1 && numeroAtividadeAtual > 0) {
-    numeroAtividadeAtual -= 1;
-  }
-  if (lado == 2 && numeroAtividadeAtual < atividadeAtual.teoria.length - 1) {
-    numeroAtividadeAtual += 1;
-  }
-  console.log(numeroAtividadeAtual + "    " + atividadeAtual.teoria.length);
-  attModal();
 }
 
 //pagina Desafio
