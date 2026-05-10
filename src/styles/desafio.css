@@ -1,6 +1,7 @@
 main {
-  width: 60%;
+  width: 70%;
   height: 500px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -25,7 +26,7 @@ main {
 #btnsRespostas button {
   background-color: var(--primaria);
   border: none;
-  width: 150px;
+  width: 80%;
   height: 40px;
   border-radius: 20px;
   transition: 0.25s;
@@ -34,4 +35,10 @@ main {
 #btnsRespostas button:hover {
   background-color: green;
   scale: 1.2;
+}
+
+@media screen and (min-width: 500px) {
+  #btnsRespostas button {
+    width: 200px;
+  }
 }
