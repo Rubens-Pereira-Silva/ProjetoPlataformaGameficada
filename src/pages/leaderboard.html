@@ -26,10 +26,14 @@
         console.log(data);
         document.getElementById("listaJogadores").innerHTML = ``;
 
-        data.forEach((jogador) => {
+        data.forEach((jogador, index) => {
           document.getElementById(
             "listaJogadores"
-          ).innerHTML += `<li><img src="../images/iconsJogador/${jogador.icon}.png"><p>${jogador.nome}</p>  <p>${jogador.moedas}</p></li>`;
+          ).innerHTML += `<li><img src="../images/iconsJogador/${
+            jogador.icon
+          }.png"><p>${index + 1}° - ${jogador.nome}</p>  <p>${
+            jogador.moedas
+          }</p></li>`;
         });
       }
       init();
