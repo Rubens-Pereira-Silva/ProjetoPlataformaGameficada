@@ -32,7 +32,7 @@ async function login(email, senha) {
     if (data != null) {
       localStorage.setItem("ID", data);
       console.log(localStorage.getItem("ID"));
-      open("/src/pages/atividades.html");
+      window.location.replace("atividades.html");
     } else {
       localStorage.removeItem("ID");
     }
