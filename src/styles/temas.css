@@ -37,6 +37,7 @@ body {
   --primaria: lightgray;
   --secundaria: whitesmoke;
   --texto: black;
+  --icone-filtro: none;
 }
 
 .dark {
@@ -44,6 +45,7 @@ body {
   --secundaria: black;
   --texto: white;
   --teoria: cyan;
+  --icone-filtro: invert(1);
 }
 
 /* Temas Dark */
@@ -51,22 +53,26 @@ body {
   --primaria: #22c55e;
   --secundaria: #1f2937;
   --texto: #ecfdf5;
+  --icone-filtro: invert(1);
 }
 
 .darkpurple {
   --primaria: #7c3aed;
   --secundaria: #1e292c;
   --texto: #f3f4f6;
+  --icone-filtro: invert(1);
 }
 .darkblue {
   --primaria: #2cabaa;
   --secundaria: #161f48;
   --texto: #cad5de;
+  --icone-filtro: invert(1);
 }
 /* Temas Light */
 
 .lightblue {
   --primaria: #6d94c5;
   --secundaria: #cbdced;
-  --texto: LIGHTGRAY;
+  --texto: black;
+  --icone-filtro: none;
 }
