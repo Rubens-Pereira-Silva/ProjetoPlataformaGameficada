@@ -9,6 +9,15 @@
 
 input {
   color: black;
+  cursor: pointer;
+}
+
+select {
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 body {
