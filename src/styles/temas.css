@@ -30,7 +30,6 @@ body {
   --primaria: lightgreen;
   --secundaria: blue;
   --texto: black;
-  --teoria: black;
 }
 
 .light {
@@ -44,35 +43,62 @@ body {
   --primaria: rgb(26, 29, 29);
   --secundaria: black;
   --texto: white;
-  --teoria: cyan;
   --icone-filtro: invert(1);
 }
 
 /* Temas Dark */
-.darkgreen {
-  --primaria: #22c55e;
-  --secundaria: #1f2937;
-  --texto: #ecfdf5;
+.bluedark {
+  --primaria: #3B82F6;
+  --secundaria: #1E3A5F;
+  --texto: #EFF6FF;
   --icone-filtro: invert(1);
 }
 
-.darkpurple {
-  --primaria: #7c3aed;
-  --secundaria: #1e292c;
-  --texto: #f3f4f6;
+.emeralddark {
+  --primaria: #10B981;
+  --secundaria: #064E3B;
+  --texto: #ECFDF5;
   --icone-filtro: invert(1);
 }
-.darkblue {
-  --primaria: #2cabaa;
-  --secundaria: #161f48;
-  --texto: #cad5de;
+.tealdark {
+  --primaria: #14B8A6;
+  --secundaria:  #134E4A;
+  --texto: #F0FDFA;
+  --icone-filtro: invert(1);
+}
+
+.violetdark {
+  --primaria: #8B5CF6;
+  --secundaria:  #2E1065;
+  --texto: #F5F3FF;
   --icone-filtro: invert(1);
 }
 /* Temas Light */
 
-.lightblue {
-  --primaria: #6d94c5;
-  --secundaria: #cbdced;
-  --texto: black;
+.bluelight {
+  --primaria: #2563EB;
+  --secundaria: #BFDBFE;
+  --texto: #1E3A5F;
+  --icone-filtro: none;
+}
+
+.emeraldlight {
+  --primaria: #059669;
+  --secundaria: #A7F3D0;
+  --texto: #064E3B;
+  --icone-filtro: none;
+}
+
+.teallight {
+  --primaria: #0D9488;
+  --secundaria: #99F6E4;
+  --texto: #134E4A;
+  --icone-filtro: none;
+}
+
+.violetlight {
+  --primaria: #7C3AED;
+  --secundaria: #DDD6FE;
+  --texto: #2E1065;
   --icone-filtro: none;
 }
