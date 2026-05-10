@@ -42,7 +42,6 @@ main {
 nav a {
     text-decoration: none;
     color: var(--texto);
-    margin-right: 15px;
     font-weight: bold;
 }
 
@@ -61,7 +60,7 @@ h2 {
 }
 
 /* -------------------------
-   Cards dos membros
+   Quadros da equipe
    ------------------------- */
 
 .membro {
@@ -81,7 +80,7 @@ h2 {
 }
 
 /* -------------------------
-   Foto
+   Fotos
    ------------------------- */
 
 .foto-container {
@@ -89,7 +88,7 @@ h2 {
     height: 120px;
     flex-shrink: 0;
     border: 4px solid var(--secundaria);
-    border-radius: 9px;
+    border-radius: 10px;
 }
 
 .foto-container img {

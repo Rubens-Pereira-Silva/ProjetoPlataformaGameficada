@@ -1,74 +1,94 @@
-/* Reset, remove espaços padrão */
+/* -------------------------
+   Reset
+   ------------------------- */
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Deixa tamanho previsível nos textos */
+    box-sizing: border-box;
 }
 
-/* Tudo aqui define norma para os textos */
+/* -------------------------
+   Geral
+   ------------------------- */
+
 body {
-    font-family: Arial, sans-serif; 
-    line-height: 1.6; 
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: var(--primaria);
-    background-color: var(--secundaria); 
+    background-color: var(--secundaria);
 }
 
 main {
     padding: 20px;
 }
 
-/* Menu do topo */
+/* -------------------------
+   Navegação
+   ------------------------- */
+
 nav {
     top: 0px;
-    display: flex; /* Deixa em linha */
-    justify-content: space-evenly; /* Espaçamento */
+    display: flex;
+    justify-content: space-evenly;
     width: 100%;
     background-color: var(--primaria);
-    padding: 15px 0; /* Espaço vertical no menu */
-    border-radius: 5px; /* Cantos arredondados */
+    padding: 15px 0;
+    border-radius: 5px;
     position: fixed;
 }
 
-/* Links do menu do topo */
 nav a {
-        text-decoration: none; /* Remove o sublinhado */
-    color: var(--texto);    
-}
-
-/* Define os blocos de texto */
-section {
-    background-color: var(--primaria); 
-    margin: 30px auto; /* Espaço externo */
-    padding: 30px; /* Espaço interno */
-    border-radius: 25px; /* Cantos não tão suaves */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra leve */
-    max-width: 900px; /* Limita a largura */
+    text-decoration: none;
     color: var(--texto);
 }
 
-/* Título principal */
-h1 {
-    color: var(--texto); 
-    text-align: center; 
-    margin-bottom: 20px;
-    font-size: 2.5em; /* Grande */
+/* -------------------------
+   Seções
+   ------------------------- */
+
+section {
+    background-color: var(--primaria);
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 900px;
+    color: var(--texto);
 }
 
-/* Subtítulos */
+#inicio {
+    margin-top: 70px;
+}
+
+/* -------------------------
+   Títulos
+   ------------------------- */
+
+h1 {
+    color: var(--texto);
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+
 h2 {
     color: var(--texto);
-    border-bottom: 3px solid var(--secundaria); /* Linha decorativa embaixo dos títulos */
+    border-bottom: 3px solid var(--secundaria);
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
-/* Caixa de destaque */
+/* -------------------------
+   Destaques e Links
+   ------------------------- */
+
 .destaque {
-    background-color: var(--secundaria); 
-    padding: 15px 15px 15px 25px; /* Mais espaço à esquerda */
-    border-left: 5px solid var(--secundaria); /* Linha verde lateral */
-    border-radius:15px;
-    margin: 20px 0; /* Espaço externo */
+    background-color: var(--secundaria);
+    padding: 15px 15px 15px 25px;
+    border-left: 5px solid var(--secundaria);
+    border-radius: 15px;
+    margin: 20px 0;
 }
 
 .linkdojogo {
@@ -77,9 +97,9 @@ h2 {
     font-weight: bold;
 }
 
-#inicio {
-    margin-top: 70px;
-}
+/* -------------------------
+   Formulário
+   ------------------------- */
 
 input, textarea {
     background-color: var(--primaria);
