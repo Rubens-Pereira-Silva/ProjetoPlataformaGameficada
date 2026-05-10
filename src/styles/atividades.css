@@ -33,7 +33,7 @@ main {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  filter: invert(1);
+  filter: var(--icone-filtro);
 }
 
 .atividade div {
