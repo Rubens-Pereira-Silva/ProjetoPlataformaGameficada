@@ -25,3 +25,11 @@ header button:hover {
   scale: 1.2;
   background-color: var(--primaria);
 }
+
+@media screen and (max-width: 700px) {
+  header {
+    height: 160px;
+    flex-wrap: wrap;
+    padding: 10px 20px 10px;
+  }
+}
