@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif; 
     line-height: 1.6; 
-    color: #333; 
+    color: var(--primaria);
     background-color: var(--secundaria); 
 }
 
@@ -79,4 +79,22 @@ h2 {
 
 #inicio {
     margin-top: 70px;
+}
+
+input, textarea {
+    background-color: var(--primaria);
+    color: var(--texto);
+    border: 1px solid var(--texto);
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: var(--secundaria);
+    color: var(--texto);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 }

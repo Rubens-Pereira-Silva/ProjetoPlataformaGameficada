@@ -23,5 +23,5 @@ header img {
 
 header button:hover {
   scale: 1.2;
-  background-color: rgb(9, 49, 0);
+  background-color: var(--primaria);
 }
