@@ -3,62 +3,85 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Equipe</title>
+    <title>Nossa Equipe</title>
 
-    <link rel="stylesheet" href="/src/styles/temas.css" />
-    <link rel="stylesheet" href="/src/styles/header.css" />
-    <link rel="stylesheet" href="/src/styles/equipe.css" />
+    <link rel="stylesheet" href="../../src/styles/temas.css" />
+    <link rel="stylesheet" href="../../src/styles/equipe.css" />
   </head>
-  <body>
-    <header id="header"></header>
+  <body class="dark">
+
+  <nav id="menu"> <!-- Criação do menu -->
+  <a href="../../index.html#sobre">Sobre</a>
+  <a href="../../index.html#objetivo">Objetivo</a>
+  <a href="../../index.html#projeto">Projeto</a>
+  <a href="../pages/contato.html">Contato</a>
+  <a href="equipe.html">Equipe</a>
+  </nav>
+
 
     <main>
-      <!-- Gabriel -->
 
-      <div class="pessoa">
-        <img src="../images/equipe/fotoPerfil.jpg" alt="" />
+      <!-- Gabriel -->
+      <section class="membro">
+        <div class="foto-container">
+          <img src="../../src/images/equipe/gabriel.jpeg" alt="Foto do Gabriel">
+        </div>
         <div class="info">
           <h2>Gabriel</h2>
           <p>Programador frontend</p>
         </div>
-      </div>
+      </section>
 
       <!-- Giovana -->
-      <div class="pessoa">
-        <img src="../images/equipe/fotoPerfil.jpg" alt="" />
+      <section class="membro">
+        <div class="foto-container">
+          <img src="../../src/images/equipe/fotoPerfil.jpg" alt="Foto da Giovana">
+        </div>
         <div class="info">
           <h2>Giovana</h2>
           <p>Programadora frontend</p>
         </div>
-      </div>
+      </section>
 
       <!-- Giovanna -->
-      <div class="pessoa">
-        <img src="../images/equipe/fotoPerfil.jpg" alt="" />
+      <section class="membro">
+        <div class="foto-container">
+          <img src="../../src/images/equipe/fotoPerfil.jpg" alt="Foto da Giovanna">
+        </div>
         <div class="info">
           <h2>Giovanna</h2>
           <p>Designer, Redatora</p>
         </div>
-      </div>
+      </section>
 
-      <!-- Giovanna -->
-      <div class="pessoa">
-        <img src="../images/equipe/fotoPerfil.jpg" alt="" />
+      <!-- Lucas -->
+      <section class="membro">
+        <div class="foto-container">
+          <img src="../../src/images/equipe/fotoPerfil.jpg" alt="Foto do Lucas">
+        </div>
         <div class="info">
           <h2>Lucas Betarelli</h2>
           <p>Programador frontend</p>
         </div>
-      </div>
+      </section>
 
       <!-- Rubens -->
-      <div class="pessoa">
-        <img src="../images/equipe/fotoPerfil.jpg" alt="" />
+      <section class="membro">
+        <div class="foto-container">
+          <img src="../../src/images/equipe/fotoPerfil.jpg" alt="Foto do Rubens">
+        </div>
         <div class="info">
           <h2>Rubens Pereira</h2>
           <p>Programador fullstack</p>
         </div>
-      </div>
+      </section>
+
+      <footer style="text-align: center">
+        <p>&copy; Todos os direitos reservados ao grupo</p>
+        <a href="../../index.html" style="color: var(--texto);">Voltar para a Página Inicial</a>
+      </footer>
+
     </main>
+
   </body>
-  <script src="../scripts/services/header.js"></script>
 </html>
