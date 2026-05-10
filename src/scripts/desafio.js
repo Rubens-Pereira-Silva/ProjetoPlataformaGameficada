@@ -20,7 +20,7 @@ async function buscarDesafios() {
 
   const data = await res.json();
   desafio.teoria = data;
-  console.log(desafio);
+  await console.log(desafio);
   attAtividade();
 }
 buscarDesafios();
@@ -30,12 +30,17 @@ function attAtividade() {
   //Salva a resposta correta da pergunta
   respostaCorreta = desafio.teoria[desafioNumero].resposta[0];
 
+  //Deixa as respostas aleatorias
+  desafio.teoria[desafioNumero].resposta = desafio.teoria[
+    desafioNumero
+  ].resposta.sort(() => Math.random() - 0.5);
+
   //muda o nome
   document.getElementById("nome").innerText = desafio.nome;
 
   //muda o texto
   document.getElementById("texto").innerText =
-    desafio.teoria[desafioNumero].pergunta;
+    desafio.teoria[desafioNumero].pergunta + "?";
 
   //muda as opções dos botões
   const botoesResposta = document.querySelectorAll("#btnsRespostas button");
