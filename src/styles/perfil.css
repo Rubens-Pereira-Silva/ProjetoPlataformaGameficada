@@ -16,3 +16,10 @@ main {
 main img {
   width: 60%;
 }
+
+@media screen and (min-width: 1200px) {
+  main {
+    width: 50%;
+  }
+  
+}
