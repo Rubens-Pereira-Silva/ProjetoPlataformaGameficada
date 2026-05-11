@@ -33,6 +33,7 @@ h2 {
   padding: 10px;
   margin: 10px;
   border-radius: 20px;
+  transition: 0.5s;
 }
 
 .itemLoja img {
@@ -46,6 +47,11 @@ h2 {
   border-radius: 8px;
   padding: 3px;
   transition: 0.25s;
+}
+
+.itemLoja:hover {
+  border: 5px solid gold;
+  background-color: var(--primaria);
 }
 
 .itemLoja button:hover {
